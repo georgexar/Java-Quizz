@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../DragDropStyle.css">
+    </head>
+    <body>
+
+        <div class="app">
+            <h1>Simple Quiz</h1>
+
+            <div class="question"><h2>Question goes here</h2></div>
+            <div class="container">
+                <div id="left" draggable="true">
+                    <div id="option1" class="list" draggable="true">Answer 1</div>
+                    <div id="option2" class="list" draggable="true">Answer 2</div>
+                    <div id="option3" class="list" draggable="true">Answer 3</div>
+                    <div id="option4" class="list" draggable="true">Answer 4</div>
+                </div>
+				<form><input type="text" id="order"></form>
+                <div id="right"></div>
+            </div>
+             <button id="reset-btn" onclick="reset()">Reset</button>
+            <button id="next-btn">Next</button>
+        </div>
+        </body>
+        <script>
+    	let list = [1,2,3,4];
+        let rightBox = document.getElementById("right");
+        let leftBox = document.getElementById("left");
+        let order = document.getElementById("order");
+        
+        function reset() {
+        	order.value="";
+
+        	for(id of list) {
+            	let element = document.getElementById("option"+id);
+            	var hasChild = rightBox.querySelector("#" + element.id) != null;
+            	if(hasChild){
+        		rightBox.removeChild(element);
+        		leftBox.appendChild(element);
+        		continue;
+            	}
+        	}
+        }
+        
+
+            for(numbers of list){
+				let element = document.getElementById("option"+numbers);
+                element.addEventListener("dragstart", function(e){
+                    let selected = e.target;                    
+
+                    rightBox.addEventListener("dragover", function(e){
+                        e.preventDefault();
+                    });
+                    
+                    rightBox.addEventListener("drop", function(e){
+                     	order.value="";
+                        for(child of rightBox.children) {
+                        	order.value+=child.id.replace("option", "");
+                        }
+                     	if(!order.value.includes(selected.id.replace("option", ""))){
+                        rightBox.appendChild(selected);
+                        order.value+=selected.id.replace("option", "");
+						}
+                       	selected=null;
+                    });
+                    
+                	})
+            }
+        </script>
+</html>

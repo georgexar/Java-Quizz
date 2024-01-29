@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+* {
+    font-family: Poppins, 'Times New Roman', Times, serif;
+}
+
+body {
+	background: url("resources/background.png");
+	background-size: cover;
+}
+
+h1 {
+
+	font-weight: bold;
+	color: #5AA8C1;
+	font-size: 35px;
+
+}
+
+a {
+	color: #AED7E5;
+	font-size: 22px;
+	margin: 20px 0;
+}
+
+
+.container {
+
+	background: url("resources/background2.png");
+	background-size: cover;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    float: center;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    border-radius: 8px;
+    min-width: 900px;
+    min-height: 500px;
+    width: 900px;
+    height: 500px;
+    padding: 10px;
+    
+}
+
+form {
+	margin: 15px auto;
+	display: block;
+	float: center;
+	text-align: center;
+	position: relative;
+}
+
+#start {
+	transition: .4s;
+	border-radius: 10px;
+}
+#start:hover {
+	transform: scale(1.07);
+}
+
+input[type="submit"] {
+	background: url("resources/button.png");
+	background-size: cover;
+	background-position: center;
+	padding: 10px;
+	width: 17%;
+	margin: 25px 0;
+	font-size: 25px;
+	border-radius: 8px;
+	color: #E6BC64;
+	transition: .5s;
+	text-align: center;
+	
+}
+
+
+
+input[type="submit"]:hover {
+	transform: scale(1.07);
+	color: #EF8C34;
+	border: none;
+	cursor: pointer;
+	
+}

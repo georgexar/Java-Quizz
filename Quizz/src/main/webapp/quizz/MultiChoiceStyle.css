@@ -1,0 +1,93 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family:'Poppins',sans-serif ;
+    box-sizing:border-box;
+}
+body{
+	background: url("../resources/background.png");
+	background-size: cover;
+}
+.app{
+    background:#fff;
+    width:90%;
+    max-width:600px;
+    margin:100px auto 0;
+    border-radius:10px;
+    padding:30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.app h1{
+    font-size:25px;
+    color:black;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom:30 px;
+}
+.quiz{
+    padding:20px 0;
+}
+.quiz h2{
+    font-size: 18px;
+    color:black;
+    font-weight:600;
+}
+
+.progress{
+    width:185px;
+    height:30px;
+    background:gray;
+    margin-bottom:50px;
+    position:relative;
+}
+
+.progress-inner{
+    background: green;
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+input[type="submit"]{
+    background:#fff;
+    color:#222;
+    font-weight:500;
+    width:100%;
+    border:1px solid grey;
+    padding:10px;
+    margin:10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor:pointer;
+    transition:all 0.3s;
+}
+
+
+
+input[type="submit"]:hover {
+	background:#222;
+    color:#fff;
+}
+
+
+ .disabled {
+            background-color: #ddd;
+            pointer-events: none;
+        }
+
+#next-btn{
+    background:grey ;
+    color: white;
+    font-weight:500;
+    width:150px;
+    border:0;
+    padding:10px;
+    margin:20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display:block;
+}

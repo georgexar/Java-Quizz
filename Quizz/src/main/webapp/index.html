@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio>
+	<source src="audio/button-sound.mp3"></source>
+</audio>
+
+<div class="container">
+
+	<h1>Welcome to a Java Quizz</h1>
+	<a><em>Are you ready to test your knowledge?</em></a><br>
+	<form id="start" method="post" action=StartServlet>
+	<input type="submit" value="Ready?">
+	</form>
+
+
+</div>
+
+</body>
+
+<script>
+    function PlaySound(melody) {
+        var path = "resources/"
+        var snd = new Audio(path + melody);
+        snd.play();
+    }
+</script>
+</html>
